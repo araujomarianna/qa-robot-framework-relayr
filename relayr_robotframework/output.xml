@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180822 00:01:46.159" generator="Robot 3.0.4 (Python 2.7.15rc1 on linux2)">
+<suite source="/home/marianna/Automation/qa-robot-framework-relayr/relayr_robotframework/TestCasesGoogleSearch.robot" id="s1" name="TestCasesGoogleSearch">
+<test id="s1-t1" name="Search for a non-empty searching key on Google">
+<kw name="Given Google webpage is opened">
+<kw name="Launch Google webpage" library="Resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${GOOGLE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180822 00:01:46.255" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20180822 00:01:50.328" starttime="20180822 00:01:46.255"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20180822 00:01:50.336" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" endtime="20180822 00:01:50.336" starttime="20180822 00:01:50.329"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:01:50.336" starttime="20180822 00:01:46.255"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:01:50.337" starttime="20180822 00:01:46.254"></status>
+</kw>
+<kw name="When a searching key &quot;relayr jobs&quot; is inserted">
+<kw name="Search for a key &quot;${KEY}&quot;" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD}</arg>
+<arg>${KEY}</arg>
+</arguments>
+<msg timestamp="20180822 00:01:50.338" level="INFO">Typing text 'relayr jobs' into text field 'id = lst-ib'.</msg>
+<status status="PASS" endtime="20180822 00:01:50.471" starttime="20180822 00:01:50.338"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:01:50.471" starttime="20180822 00:01:50.337"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:01:50.471" starttime="20180822 00:01:50.337"></status>
+</kw>
+<kw name="And clicking on Search button">
+<kw name="Click on Search button" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_SEARCH}</arg>
+</arguments>
+<msg timestamp="20180822 00:01:50.473" level="INFO">Clicking button 'name = btnK'.</msg>
+<status status="PASS" endtime="20180822 00:01:51.349" starttime="20180822 00:01:50.472"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:01:51.349" starttime="20180822 00:01:50.472"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:01:51.349" starttime="20180822 00:01:50.472"></status>
+</kw>
+<kw name="And the first result is selected">
+<kw name="Click on the first searching result" library="Resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${SEARCH_RESULTS}</arg>
+</arguments>
+<msg timestamp="20180822 00:01:51.366" level="INFO">Current page contains element 'id = resultStats'.</msg>
+<status status="PASS" endtime="20180822 00:01:51.366" starttime="20180822 00:01:51.350"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LINK_FIRST}</arg>
+</arguments>
+<msg timestamp="20180822 00:01:51.367" level="INFO">Clicking element 'css = #rso &gt; div:nth-child(1) &gt; div &gt; div &gt; div &gt; div &gt; h3'.</msg>
+<status status="PASS" endtime="20180822 00:02:00.336" starttime="20180822 00:01:51.366"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:00.336" starttime="20180822 00:01:51.350"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:00.336" starttime="20180822 00:01:51.349"></status>
+</kw>
+<kw name="Then the correct webpage should be opened">
+<kw name="Verify if the correct webpage is open" library="Resource">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>css = h1</arg>
+<arg>WE’RE HIRING!</arg>
+</arguments>
+<msg timestamp="20180822 00:02:00.338" level="INFO">Verifying element 'css = h1' contains exact text 'WE’RE HIRING!'.</msg>
+<status status="PASS" endtime="20180822 00:02:00.394" starttime="20180822 00:02:00.338"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:00.394" starttime="20180822 00:02:00.337"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:00.395" starttime="20180822 00:02:00.337"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:00.395" critical="yes" starttime="20180822 00:01:46.254"></status>
+</test>
+<test id="s1-t2" name="Search for a non-empty key on Google using &quot;I'm feeling luck&quot;">
+<kw name="Given Google webpage is opened">
+<kw name="Launch Google webpage" library="Resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${GOOGLE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:00.399" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20180822 00:02:04.820" starttime="20180822 00:02:00.398"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20180822 00:02:04.826" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" endtime="20180822 00:02:04.827" starttime="20180822 00:02:04.820"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:04.827" starttime="20180822 00:02:00.397"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:04.827" starttime="20180822 00:02:00.397"></status>
+</kw>
+<kw name="When a searching key &quot;relayr jobs&quot; is inserted">
+<kw name="Search for a key &quot;${KEY}&quot;" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD}</arg>
+<arg>${KEY}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:04.829" level="INFO">Typing text 'relayr jobs' into text field 'id = lst-ib'.</msg>
+<status status="PASS" endtime="20180822 00:02:04.968" starttime="20180822 00:02:04.828"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:04.968" starttime="20180822 00:02:04.828"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:04.969" starttime="20180822 00:02:04.827"></status>
+</kw>
+<kw name="And clicking on I'm feeling luck button">
+<kw name="Click on I'm feeling luck button" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_LUCK}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:04.970" level="INFO">Clicking button 'name = btnI'.</msg>
+<status status="PASS" endtime="20180822 00:02:10.814" starttime="20180822 00:02:04.970"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:10.815" starttime="20180822 00:02:04.969"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:10.815" starttime="20180822 00:02:04.969"></status>
+</kw>
+<kw name="Then the correct webpage should be opened">
+<kw name="Verify if the correct webpage is open" library="Resource">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>css = h1</arg>
+<arg>WE’RE HIRING!</arg>
+</arguments>
+<msg timestamp="20180822 00:02:10.816" level="INFO">Verifying element 'css = h1' contains exact text 'WE’RE HIRING!'.</msg>
+<status status="PASS" endtime="20180822 00:02:10.875" starttime="20180822 00:02:10.816"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:10.875" starttime="20180822 00:02:10.816"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:10.876" starttime="20180822 00:02:10.815"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:10.876" critical="yes" starttime="20180822 00:02:00.396"></status>
+</test>
+<test id="s1-t3" name="Search for an empty searching key on Google">
+<kw name="Given Google webpage is opened">
+<kw name="Launch Google webpage" library="Resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${GOOGLE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:10.880" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20180822 00:02:14.994" starttime="20180822 00:02:10.879"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20180822 00:02:15.001" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" endtime="20180822 00:02:15.001" starttime="20180822 00:02:14.994"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.001" starttime="20180822 00:02:10.879"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.001" starttime="20180822 00:02:10.878"></status>
+</kw>
+<kw name="When a searching key &quot;&quot; is inserted">
+<kw name="Search for a key &quot;${KEY}&quot;" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD}</arg>
+<arg>${KEY}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:15.003" level="INFO">Typing text '' into text field 'id = lst-ib'.</msg>
+<status status="PASS" endtime="20180822 00:02:15.081" starttime="20180822 00:02:15.003"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.081" starttime="20180822 00:02:15.002"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.081" starttime="20180822 00:02:15.002"></status>
+</kw>
+<kw name="And click on search button" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_SEARCH}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:15.083" level="INFO">Clicking button 'name = btnK'.</msg>
+<status status="PASS" endtime="20180822 00:02:15.197" starttime="20180822 00:02:15.082"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.198" starttime="20180822 00:02:15.082"></status>
+</kw>
+<kw name="Then navigating keeps on Google webpage">
+<kw name="Check if the webpage is Google main page" library="Resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${BUTTON_SEARCH}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:15.207" level="INFO">Current page contains element 'name = btnK'.</msg>
+<status status="PASS" endtime="20180822 00:02:15.207" starttime="20180822 00:02:15.199"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.207" starttime="20180822 00:02:15.198"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.208" starttime="20180822 00:02:15.198"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:15.208" critical="yes" starttime="20180822 00:02:10.877"></status>
+</test>
+<test id="s1-t4" name="Search for an empty searching key on Google using &quot;I'm feeling luck&quot;">
+<kw name="Given Google webpage is opened">
+<kw name="Launch Google webpage" library="Resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${GOOGLE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:15.210" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20180822 00:02:19.537" starttime="20180822 00:02:15.210"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20180822 00:02:19.546" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" endtime="20180822 00:02:19.546" starttime="20180822 00:02:19.537"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:19.547" starttime="20180822 00:02:15.209"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:19.547" starttime="20180822 00:02:15.209"></status>
+</kw>
+<kw name="When a searching key &quot;&quot; is inserted">
+<kw name="Search for a key &quot;${KEY}&quot;" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD}</arg>
+<arg>${KEY}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:19.549" level="INFO">Typing text '' into text field 'id = lst-ib'.</msg>
+<status status="PASS" endtime="20180822 00:02:19.635" starttime="20180822 00:02:19.549"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:19.636" starttime="20180822 00:02:19.548"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:19.636" starttime="20180822 00:02:19.547"></status>
+</kw>
+<kw name="And clicking on I'm feeling luck button">
+<kw name="Click on I'm feeling luck button" library="Resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_LUCK}</arg>
+</arguments>
+<msg timestamp="20180822 00:02:19.637" level="INFO">Clicking button 'name = btnI'.</msg>
+<status status="PASS" endtime="20180822 00:02:22.619" starttime="20180822 00:02:19.637"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:22.619" starttime="20180822 00:02:19.636"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:22.619" starttime="20180822 00:02:19.636"></status>
+</kw>
+<kw name="Then navigating goes to Google Doodles">
+<kw name="Check if the webpage goes to Google Doodles" library="Resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//a[@href="/doodles"]</arg>
+</arguments>
+<msg timestamp="20180822 00:02:22.643" level="INFO">Current page contains element 'xpath=//a[@href="/doodles"]'.</msg>
+<status status="PASS" endtime="20180822 00:02:22.644" starttime="20180822 00:02:22.620"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:22.644" starttime="20180822 00:02:22.620"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:22.644" starttime="20180822 00:02:22.619"></status>
+</kw>
+<status status="PASS" endtime="20180822 00:02:22.644" critical="yes" starttime="20180822 00:02:15.208"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180822 00:02:22.889" starttime="20180822 00:02:22.646"></status>
+</kw>
+<doc>These tests verify the Search functionality on Google site
+The tests are All pairs technique based.
+The Test cases design considered two variables:
+Searching Key (Empty or Not Empty) and
+Kind of Searching (Search or I'm feeling luck buttons).</doc>
+<status status="PASS" endtime="20180822 00:02:22.889" starttime="20180822 00:01:46.160"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestCasesGoogleSearch" pass="4">TestCasesGoogleSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
